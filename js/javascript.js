@@ -27,8 +27,6 @@ $(document).ready(function () {
         $firstColor = values[0];
         $secondColor = values[1];
         $gradientDirection = values[2];
-    } else {
-        // No hash found
     };
 
     // initialize droppers
