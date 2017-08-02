@@ -1,0 +1,5 @@
+.tablet-hidden {
+    @include mq($from: tablet) {
+        display: none;
+    }
+}

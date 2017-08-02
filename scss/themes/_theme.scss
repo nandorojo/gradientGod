@@ -1,0 +1,33 @@
+/* Themes -> Theme partial */
+
+// General Styles
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+.code-block {
+    @include mq($from: tablet) {
+        padding: 30px;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include full-width-height;
+    background: black;
+    opacity: 0.5;
+    z-index: 0;
+}

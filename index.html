@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- animate.css
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        GradientGod
+    </title>
+</head>
+
+<body>
+    <header>
+        <div class="headerContent">
+            <div>
+                <strong class="logo">
+                GradientGod
+            </strong>
+                <br class="tablet-hidden"> by Fernando Rojo
+            </div>
+            <div>
+                <div class="button button-outline share-me">
+                    Share
+                </div>
+                <div class="button export-me">
+                    Export
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main full-screen">
+        <div class="picker">
+            <div class="container">
+                <h1>
+                    Create your gradient
+                </h1>
+                <h2>
+                    Colors
+                </h2>
+                <div class="color-options">
+                    <div class="color firstColor">
+                        <input type="text" class="dropper" id="firstColor">
+                        <div class="random">
+                            randomize
+                        </div>
+                    </div>
+                    <img class="flip" src="file:///Users/Fernando/Penn/Web%20Design/GradientGod/assets/swap.svg">
+                    <div class="color secondColor">
+                        <input type="text" class="dropper" id="secondColor">
+                        <div class="random">
+                            randomize
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gradientDirection" class="container">
+                <h2>
+                    Direction
+                </h2>
+                <ul>
+                    <li>
+                        <span>90 degrees</span>
+
+                    </li>
+                    <li class="active">
+                        <span>180 degrees</span>
+                    </li>
+                    <li>
+                        <span>Custom</span>
+                    </li>
+                    <div class="custom-color">
+                        <div class="overlay"></div>
+                        <div class="selector">
+                            <h3>
+                                Enter a number between 0 and 360
+                            </h3>
+                            <input type='text' placeholder="Example: 90">
+                            <div class="button button-outline disabled">
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div id="elementType" class="container">
+                <h2>
+                    Element type
+                </h2>
+                <ul>
+                    <li>
+                        <span>Button</span>
+
+                    </li>
+                    <li class="active">
+                        <span>Background</span>
+                    </li>
+                    <li>
+                        <span>Text</span>
+                    </li>
+                    <div class="custom-color">
+                        <div class="overlay"></div>
+                        <div class="selector">
+                            <h3>
+                                Enter a number between 0 and 360
+                            </h3>
+                            <input type='text' placeholder="Example: 90">
+                            <div class="button button-outline disabled">
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="show-the-world">
+                <h2>
+                    Share your creation
+                </h2>
+                <div class="button button-outline share-me">
+                    Share
+                </div>
+                <div class="button export-me">
+                    Export
+                </div>
+            </div>
+        </div>
+        <div class="gradientButtons elementOutput">
+            <div class="container">
+                <div class="button small">
+                    Small button
+                </div>
+                <div class="button medium">
+                    Medium button
+                </div>
+                <div class="button large">
+                    Large button
+                </div>
+                <div class="button xlarge">
+                    X-large button
+                </div>
+            </div>
+        </div>
+        <div class="gradient elementOutput">
+        </div>
+    </section>
+
+    <section class="exported">
+        <pre class="language-css">
+<code>
+<span class="token selector">#yourDiv</span> <span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span><span class="color1"> red</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* For browsers that do not support gradients */</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-webkit-linear-gradient</span><span class="token punctuation">(</span><span class="gradientDirection">90deg</span>, <span class="color1">red</span>, <span class="color2">yellow</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* For Safari 5.1 to 6.0 */</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-o-linear-gradient</span><span class="token punctuation">(</span><span class="gradientDirection">90deg</span>, <span class="color1">red</span>, <span class="color2">yellow</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* For Opera 11.1 to 12.0 */</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-moz-linear-gradient</span><span class="token punctuation">(</span><span class="gradientDirection">90deg</span>, <span class="color1">red</span>, <span class="color2">yellow</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* For Firefox 3.6 to 15 */</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span><span class="gradientDirection">90deg</span>, <span class="color1">red</span>, <span class="color2">yellow</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* Standard syntax */</span>
+<span class="token punctuation">}</span>
+</code>
+</pre>
+    </section>
+    <div class="credits" style="display:none">
+        <div>Icons made by <a href="https://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </div>
+
+    <!-- TypeKit -->
+    <script>
+        (function(d) {
+            var config = {
+                    kitId: 'nas7eea',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+
+    </script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- style code blocks -->
+    <script src="js/prism.js"></script>
+    <!-- color droppers -->
+    <script src="js/spectrum.js"></script>
+    <!-- Custom javascript -->
+    <script src="js/javascript.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+/* Pages -> Home Styles */
+
+.main {
+    @include display-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    @include mq($from: tablet) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    }
+}
+
+.picker {
+    background: $background-color;
+    @include mq($from: tablet) {
+        width: 40%;
+    }
+    h2 {
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: .02em;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            @include button_styles;
+            padding: 5px 0px;
+            width: 100px;
+            font-size: small;
+            text-align: center;
+            &.active {
+                @include button_colors;
+            }
+            span {
+                margin: auto;
+            }
+        }
+    }
+}
+
+.color {
+    padding: 10px 0;
+    display: inline;
+}
+
+.gradient {
+    height: 400px;
+    @include mq($from: tablet) {
+        width: 100%;
+        @include height-combo(100vh, 114px);
+        position: fixed;
+        top: 114px;
+        left: 0;
+        z-index: -1;
+    }
+    background: $primary-color;
+    /* For browsers that do not support gradients */
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: -webkit-gradient(linear, left top, right top, from($primary-color), to($secondary-color));
+    background: linear-gradient(to right, $primary-color, $secondary-color);
+    /* Standard syntax */
+}
+
+.full-screen {
+    @include mq($from: tablet) {
+        display: block;
+        .picker {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+            @include justify-content(space-between);
+            @include flex-center-vertical;
+        }
+        h1,
+        h2 {
+            display: none;
+        }
+        .show-the-world {
+            display: none;
+        }
+    }
+}
+
+.color-options {
+    @include display-flex;
+    @include flex-center-vertical;
+    .random {
+        @include no-select;
+        cursor: pointer;
+        padding: 0 4px;
+    }
+    .flip {
+        height: 25px;
+        margin-right: 10px;
+        cursor: pointer;
+        @include no-select;
+    }
+}

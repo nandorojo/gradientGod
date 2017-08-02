@@ -1,0 +1,56 @@
+/* Layout -> Drawer Styles */
+
+.exported {
+    position: fixed;
+    top: 94px;
+    right: 0;
+    transition: all .5s ease;
+    width: 100%;
+    transform: translateX(100%);
+    &.active {
+        transform: translateX(0);
+    }
+    @include mq($from: tablet) {
+        width: 50%;
+        right: 0;
+    }
+}
+
+.custom-color {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include full-width-height;
+    @include display-flex;
+    @include justify-content(center);
+    @include flex-center-vertical;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s ease;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        .selector {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    input {
+        border: 3px solid $secondary-color;
+        padding: 10px;
+        border-radius: 3px;
+    }
+    .selector {
+        background: $body-color;
+        color: $background-color;
+        padding: 30px;
+        border-radius: 5px;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .25s ease;
+        transition-delay: .25s;
+    }
+}

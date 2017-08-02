@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- animateMePlz plugin -->
+    <script src="js/animateMePlz.js" type="text/javascript"></script>
+    <!-- Custom javascript -->
+    <script src="js/javascript.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $('.animated').animateMePlz();
+            });
+        });
+
+    </script>
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- TypeKit -->
+    <script>
+        (function(d) {
+            var config = {
+                    kitId: 'nas7eea',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+
+    </script>
+    <title>
+        animateMePlz | animate.css on scroll
+    </title>
+</head>
+
+<body>
+    <!-- style code blocks -->
+    <script src="js/prism.js"></script>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                animateMePlz 🚀
+            </a>
+
+        </div>
+        <ul>
+            <li>
+                <a>
+                Demo
+                </a>
+            </li>
+            <li>
+                Customize
+            </li>
+            <li>
+                <a href="use.html">
+                Use
+                </a>
+            </li>
+        </ul>
+        <div>
+            by Fernando Rojo
+        </div>
+    </header>
+
+    <!-- First section -->
+    <section id="use-first" class="big-image">
+        <div class="container fadeIn animated">
+            <h1>
+                install animateMePlz
+            </h1>
+            <p>
+                Get animateMePlz up and running in under a minute. Hardly any javascript, jQuery or CSS knowledge necessary.
+            </p>
+            <div>
+                <a class="button">
+                Download
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code block -->
+    <section class="code-block">
+        <div class="container">
+            <h2>
+                1. Insert jQuery & animateMePlz.js
+            </h2>
+            <p>
+                Once you have downloaded <a>the necessary files</a> should place the animateMePlz.js file in the head of your HTML file. It should go below jQuery.
+            </p>
+            <pre class="language-html">
+<code class="language-html">
+&lt;head&gt;
+...
+&lt;!-- insert jQuery (you can also download the file and insert it) --&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;!-- insert animateMePlz.js into your html --&gt;
+&lt;script src="path/to/animateMePlz.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code> 
+</pre>
+        </div>
+    </section>
+    <section class="code-block">
+        <div class="container">
+            <h2>
+                2. Initiate animateMePlz
+            </h2>
+            <p>
+                Add a script tag below the first two that initiates your function on all the elements with the class "animated". You'll see why we use the class animated in step 4.
+            </p>
+            <pre class="language-html">
+<code class="language-html">
+&lt;head&gt;
+...
+&lt;!-- insert jQuery (you can also download the file and insert it) --&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;!-- insert animateMePlz.js into your html --&gt;
+&lt;script src="path/to/animateMePlz.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;!-- initiate function on scroll --&gt;
+&lt;script&gt;
+    $(document).ready(function(){
+        $(window).scroll(function() {
+            $('.animated').animateMePlz();
+        });
+    }) 
+&lt;/script&gt;
+&lt;/head&gt;
+</code> 
+</pre>
+        </div>
+        <div class="container">
+            <p>
+                <strong>Note: </strong>If you only want to animate elements with a certain class in (addition to animated), such as only elements that will fade in, you can replace <code class="language-javascript">$('.animated')</code> with <code class="language-javascript">$('.animated.fadeIn')</code>.
+            </p>
+            <pre class="language-html">
+<code class="language-html">
+&lt;head&gt;
+...
+&lt;!-- initiate function on scroll --&gt;
+&lt;script&gt;
+    $(document).ready(function(){
+        $(window).scroll(function() {
+            $('.animated.fadeIn').animateMePlz();
+        });
+    }) 
+&lt;/script&gt;
+&lt;/head&gt;
+</code> 
+</pre>
+            <p>
+                Say that instead of animating <strong>every</strong> element with the class <code class="language-javascript">'.animated'</code>, you only want to animate elements with the class <code class="language-javascript">'.thisDiv'</code>. In that case, you would substitute <code class="language-javascript">$('.animated')</code> with <code class="language-javascript">$('.animated.thisDiv')</code>.
+            </p>
+        </div>
+    </section>
+    <section class="code-block">
+        <div class="container">
+            <h2>
+                3. Insert animate.css
+            </h2>
+            <p>
+                You can insert animate.css via CDN by copying what I entered below. Make sure this is in the <code class="language-html">&lt;head&gt;</code> of your document. You an also <a href="https://daneden.github.io/animate.css/" target="_blank">download the file</a> from Dan Eder's website.
+            </p>
+            <pre class="language-html">
+<code class="language-html">
+&lt;head&gt;
+...
+&lt;!-- insert jQuery (you can also download the file and insert it) --&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;!-- insert animateMePlz.js into your html --&gt;
+&lt;script src="path/to/animateMePlz.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;!-- initiate function on scroll --&gt;
+&lt;script&gt;
+    $(document).ready(function(){
+        $(window).scroll(function() {
+            $('.animated').animateMePlz();
+        });
+    }) 
+&lt;/script&gt;
+&lt;!-- animate.css --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"&gt;
+&lt;/head&gt;
+</code> 
+</pre>
+        </div>
+    </section>
+    <section class="code-block">
+        <div class="container">
+            <h2>
+                4. Apply to elements
+            </h2>
+            <p>
+                Add the class <code class="language-javascript">'animated'</code> to any element you want to animate. Separately, add a class for the animation style you want to use (<code class="language-javascript">'fadeIn'</code>, for example.) Go to Dan Eder's <a href="https://daneden.github.io/animate.css/" target="_blank">website </a>to see all available animations.
+            </p>
+            <pre class="language-html">
+<code class="language-html">
+&lt;body&gt;
+...
+&lt;!-- insert jQuery (you can also download the file and insert it) --&gt;
+&lt;div class="animated fadeIn"&gt;
+    Fade this div in!
+&lt;/div&gt;
+&lt;/body&gt;
+</code> 
+</pre>
+        </div>
+    </section>
+</body>
+
+</html>

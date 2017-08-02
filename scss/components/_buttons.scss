@@ -1,0 +1,46 @@
+/* Components -> Button Styles */
+
+.button {
+    @include button_styles;
+    @include secondary-button_colors;
+    &.disabled {
+        opacity: .5;
+        cursor: default;
+        &:hover {
+            transform: translateY(0);
+        }
+    }
+    border: none;
+    &.small {
+        padding: 5px 10px;
+    }
+    &.medium {
+        padding: 10px 20px;
+    }
+    &.large {
+        padding: 20px 40px;
+    }
+    &.xlarge {
+        padding: 30px 50px;
+    }
+}
+
+.button-outline {
+    @include outline_button;
+}
+
+.button-outline-body,
+.button-outline-body:hover {
+    background: transparent;
+    color: $body-color;
+    border-color: $body-color;
+}
+
+.show-the-world {
+    color: $background-color;
+    text-align: center;
+    background: white;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-radius: 3px;
+}

@@ -1,0 +1,38 @@
+/* Base -> Typography Styles */
+
+body {
+    font-family: 'sofia-pro', sans-serif, 'arial';
+    color: $body-color;
+}
+
+pre * {
+    font-family: Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    &:hover {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+        color: inherit;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+// Highlighting text
+::-moz-selection {
+    /* Code for Firefox */
+    color: $selection-text;
+    background: $selection-background;
+}
+
+::selection {
+    color: $selection-text;
+    background: $selection-background;
+}

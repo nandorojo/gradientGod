@@ -1,0 +1,60 @@
+.sp-container,
+.sp-container button,
+.sp-container input,
+.sp-color,
+.sp-hue,
+.sp-clear,
+.sp-palette-container {
+    font-family: inherit;
+    border: none;
+    &:hover {
+        border: none;
+    }
+    
+}
+
+.sp-replacer.sp-light {
+    border: none;
+    background: transparent;
+    color: inherit;
+}
+
+.sp-preview {
+    border: none;
+    @include button_styles;
+    padding: 20px 50px;
+}
+
+.sp-dd {
+    padding: 1.3em 0;
+}
+
+.sp-preview-inner {
+    @include display-flex;
+    @include justify-content(center);
+    @include flex-center-vertical;
+}
+
+.sp-container.sp-light.sp-palette-buttons-disabled.sp-initial-disabled {
+    border: none;
+    background: $body-color;
+    color: $background-color;
+}
+
+input.sp-input {
+    border: solid 3px $background-color;
+    &:focus {
+        border: solid 3px $background-color;
+    }
+    &:hover {
+        border: solid 3px $background-color;
+    }
+}
+button.sp-choose, button.sp-choose:hover {
+    background: $primary-color;
+    color: $body-color;
+}
+.sp-slider {
+    border: solid 2px black;
+    background: none;
+}

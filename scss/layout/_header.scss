@@ -1,0 +1,53 @@
+/* Layout -> Header Styles */
+
+header {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: $header-color;
+    transition: all .25s ease;
+    background: $body-color;
+    color: $background-color;
+    @include no-select;
+    .logo {
+        color: $primary-color;
+        font-size: x-large;
+    }
+    .button {
+        margin: 0 5px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline-block;
+            margin: 0 20px;
+            a,
+            a:hover {
+                font: inherit;
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+    .share-me {
+        display: none;
+    }
+    @include mq($from: tablet) {
+        &>* {
+            display: block;
+        }
+        .share-me {
+            display: inline-block;
+        }
+    }
+}
+
+.headerContent {
+    @include display-flex;
+    @include justify-content(space-between);
+    @include flex-center-vertical;
+    padding: 20px;
+}
